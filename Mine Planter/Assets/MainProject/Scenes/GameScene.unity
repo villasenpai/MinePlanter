@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cell (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8792744006800170289, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
+      propertyPath: cellNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8930682073773628536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -320,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cell (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8792744006800170289, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
+      propertyPath: cellNumber
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8930682073773628536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -382,6 +390,7 @@ GameObject:
   - component: {fileID: 1108560475}
   - component: {fileID: 1108560474}
   - component: {fileID: 1108560476}
+  - component: {fileID: 1108560477}
   m_Layer: 0
   m_Name: CellSelector
   m_TagString: Untagged
@@ -401,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46ec8c7445fcce4fae72b48266bdbb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockSize: {x: 3, y: 2}
   bombPrefab: {fileID: 8323222593676111003, guid: e4708e251a970a847b77d6244d47df68, type: 3}
 --- !u!4 &1108560475
 Transform:
@@ -428,6 +438,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a9c7fc83a2b7f48af7430a38b7aff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1108560477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108560473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d3f1ba592e8844186808a29abfdd4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1206866973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 3212314353148673536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_Name
       value: Cell (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792744006800170289, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
+      propertyPath: cellNumber
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8930682073773628536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_RootOrder
@@ -501,6 +527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cell (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8792744006800170289, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
+      propertyPath: cellNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8930682073773628536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -562,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 3212314353148673536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_Name
       value: Cell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792744006800170289, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
+      propertyPath: cellNumber
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8930682073773628536, guid: fbcaeb03663b95942b52b31e4cf4deb9, type: 3}
       propertyPath: m_RootOrder

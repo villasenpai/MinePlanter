@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class BombLocationSelection : MonoBehaviour
 {
+    [SerializeField] Vector2 blockSize;
     [SerializeField] GameObject bombPrefab;
-    ICellSelection cellSelector;
 
+    Cell[] cells;
+
+    ICellSelection cellSelector;
     Transform selectedCell;
 
 
     private void Awake()
     {
         cellSelector = GetComponent<ICellSelection>();
+    }
+
+    private void Start()
+    {
+        cells = FindObjectsOfType<Cell>();
     }
 
     private void Update()
@@ -22,11 +30,12 @@ public class BombLocationSelection : MonoBehaviour
         if (selectedCell != null)
         {
             PlaceBombInCell(selectedCell);
+            selectedCell.GetComponent<Cell>().UpdateNeighbors();
             selectedCell = null;
         }
     }
 
-   
+
 
     void PlaceBombInCell(Transform cellTranform)
     {

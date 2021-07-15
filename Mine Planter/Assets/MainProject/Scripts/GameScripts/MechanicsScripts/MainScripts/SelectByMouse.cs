@@ -2,19 +2,29 @@
 
 public class SelectByMouse : MonoBehaviour, ICellSelection
 {
+    IColliderGetter colliderGetter;
+
+    private void Awake()
+    {
+        colliderGetter = GetComponent<IColliderGetter>();
+    }
+
     public Transform GetCell()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector3.forward);
+            Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var hit = colliderGetter.GetCollider(mousePoint);
 
-            if (hit.collider != null)
+            if (hit != null)
             {
-                return hit.collider.transform;
+                return hit.transform;
             }
         }
 
         return null;
     }
+
+
+    
 }
