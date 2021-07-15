@@ -44,3 +44,6 @@ TagManager:
   - name: Cell
     uniqueID: 1206140991
     locked: 0
+  - name: Bomb
+    uniqueID: 2657619371
+    locked: 0
