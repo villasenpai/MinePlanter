@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BombLocationSelection : MonoBehaviour
 {
+    [SerializeField] GameObject bombPrefab;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -13,8 +15,13 @@ public class BombLocationSelection : MonoBehaviour
 
             if (hit.collider != null)
             {
-                print("hit");
+                PlaceBombInCell(hit.collider.transform);
             }
         }
+    }
+
+    void PlaceBombInCell(Transform cellTranform)
+    {
+        GameObject bomb = Instantiate(bombPrefab, cellTranform);
     }
 }
