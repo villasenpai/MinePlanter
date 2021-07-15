@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class SelectByMouse : MonoBehaviour, ICellSelection
+public class MouseSelector : MonoBehaviour, IManualCellSelector
 {
     IColliderGetter colliderGetter;
 
@@ -8,6 +9,7 @@ public class SelectByMouse : MonoBehaviour, ICellSelection
     {
         colliderGetter = GetComponent<IColliderGetter>();
     }
+
 
     public Transform GetCell()
     {
@@ -24,7 +26,4 @@ public class SelectByMouse : MonoBehaviour, ICellSelection
 
         return null;
     }
-
-
-    
 }

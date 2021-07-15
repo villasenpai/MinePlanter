@@ -2,5 +2,6 @@
 
 public interface ICellSelection
 {
+    int totalBombCount { get; set; }
     Transform GetCell();
 }

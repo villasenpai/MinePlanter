@@ -296,6 +296,10 @@ GameObject:
   - component: {fileID: 1068850386636791463}
   - component: {fileID: 8792744006800170289}
   - component: {fileID: 7484085257094978780}
+  - component: {fileID: 7996264816964244738}
+  - component: {fileID: 6962577682716559838}
+  - component: {fileID: 8022409066345737007}
+  - component: {fileID: 2400134240813005716}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -358,16 +362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daa15db431b3de459f90ecf1c401491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighborCells:
-  - {fileID: 4677598144215733169}
-  - {fileID: 3724753228759297268}
-  - {fileID: 210870380724885550}
-  - {fileID: 6102867066545167507}
-  - {fileID: 3358514131579065723}
-  - {fileID: 6308875292606429856}
-  - {fileID: 3007255052931907984}
-  - {fileID: 2335269413215891233}
-  cellNeighborWithBombsText: {fileID: 2688177022080412284}
 --- !u!114 &7484085257094978780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +374,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d3f1ba592e8844186808a29abfdd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7996264816964244738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212314353148673536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f875b6eb81b70c3428aa1159bb311265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborCells:
+  - {fileID: 4677598144215733169}
+  - {fileID: 3724753228759297268}
+  - {fileID: 210870380724885550}
+  - {fileID: 6102867066545167507}
+  - {fileID: 3358514131579065723}
+  - {fileID: 6308875292606429856}
+  - {fileID: 3007255052931907984}
+  - {fileID: 2335269413215891233}
+--- !u!114 &6962577682716559838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212314353148673536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79ade1e7e54ad44b9e0f75ef7d62253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborWithBombsText: {fileID: 2688177022080412284}
+--- !u!114 &8022409066345737007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212314353148673536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf70d5f1912c8be46b4860b86b1cf1ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2400134240813005716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212314353148673536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339fd53ac4ab8764f9b09a39d90800e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4845316621802813310}
+  correctColor: {r: 0.22851989, g: 0.9056604, b: 0.12388753, a: 1}
+  wrongColor: {r: 0.8679245, g: 0.09416164, b: 0.09416164, a: 1}
 --- !u!1 &3492640761951854173
 GameObject:
   m_ObjectHideFlags: 0

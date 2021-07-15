@@ -1,42 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Cell : MonoBehaviour
+public class Cell : MonoBehaviour, ICell
 {
-    [SerializeField] Transform[] neighborCells;
-    [SerializeField] TextMeshProUGUI cellNeighborWithBombsText;
+    INeighborUpdate neighborUpdater;
+    IBombNeighborUpdate neighborWithBombUpdater;
 
-    int cellNeighborWithBombs = 0;
+    bool withBomb = false;
+    bool withCounter = false;
+    public bool isWithCounter
+    {
+        get
+        {
+            return withCounter;
+        }
+        set
+        {
+            withCounter = value;
+        }
+    }
+    public bool isWithBomb
+    {
+        get
+        {
+            return withBomb;
+        }
+        set
+        {
+            withBomb = value;
+        }
+    }
+    public Transform cellTranform
+    {
+        get
+        {
+            return transform;
+        }
+        set
+        {
 
-    IColliderGetter colliderGetter;
+        }
+    }
 
     private void Awake()
     {
-        colliderGetter = GetComponent<IColliderGetter>();
-        cellNeighborWithBombsText.enabled = false;
+        neighborWithBombUpdater = GetComponent<IBombNeighborUpdate>();
+        neighborUpdater = GetComponent<INeighborUpdate>();
     }
-
-    public void UpdateCell()
-    {
-        cellNeighborWithBombsText.enabled = true;
-        cellNeighborWithBombs++;
-        cellNeighborWithBombsText.text = cellNeighborWithBombs.ToString();
-    }
-
 
     public void UpdateNeighbors()
     {
-        cellNeighborWithBombsText.enabled = false;
-
-        foreach (Transform cell in neighborCells)
-        {
-            var hit = colliderGetter.GetCollider(cell.position);
-
-            if (hit != null)
-                hit.transform.GetComponent<Cell>().UpdateCell();
-        }
+        isWithCounter = false;
+        neighborWithBombUpdater.cellNeighborWithBombsText.enabled = false;
+        isWithBomb = true;
+        neighborUpdater.UpdateNeighbors();
     }
-}
 
+
+
+}
