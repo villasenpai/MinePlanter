@@ -9,9 +9,6 @@ public class BombLocationSelection : MonoBehaviour, IBombPlacement
         if (selectedCell == null)
             return false;
 
-        if (selectedCell.transform.GetComponent<ICell>().isWithBomb)
-            return false;
-
         selectedCell.GetComponent<ICell>().UpdateNeighbors();
         return true;
     }

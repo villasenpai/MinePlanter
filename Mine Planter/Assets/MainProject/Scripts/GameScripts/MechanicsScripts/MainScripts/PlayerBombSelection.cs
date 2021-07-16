@@ -6,13 +6,19 @@ public class PlayerBombSelection : MonoBehaviour, IBombPlacement
 {
     [SerializeField] GameObject bombPrefab;
     IManualCellSelector cellSeletor;
-
+    PlayerBombCounter playerBombCounter;
+    BombCountDisplay bombDisplay;
 
     private void Awake()
     {
         cellSeletor = GetComponent<IManualCellSelector>();
     }
-    
+
+    private void Start()
+    {
+        playerBombCounter = PlayerBombCounter.playerBombCounter;
+        bombDisplay = BombCountDisplay.bombDisplay;
+    }
 
     private void Update()
     {
@@ -25,6 +31,8 @@ public class PlayerBombSelection : MonoBehaviour, IBombPlacement
             return false;
 
         selectedCell.GetComponent<ICellBomb>().HandleBomb(bombPrefab);
+        playerBombCounter.CountCellWithBombs();
+        bombDisplay.UpdateBombCountDisplay();
         return true;
     }
 }
