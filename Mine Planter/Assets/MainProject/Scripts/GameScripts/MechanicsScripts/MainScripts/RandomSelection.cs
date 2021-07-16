@@ -39,6 +39,8 @@ public class RandomSelection : MonoBehaviour, ICellSelection
         tempoCells = FindObjectsOfType<Cell>();
         cells.AddRange(tempoCells);
         totalBombCount = Random.Range(bombMinCount, bombMaxCount + 1);
+        PlayerBombCounter.playerBombCounter.totalBombCount = totalBombCount;
+        BombCountDisplay.bombDisplay.UpdateBombCountDisplay();
     }
 
     // Update is called once per frame
